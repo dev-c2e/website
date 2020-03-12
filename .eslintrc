@@ -1,8 +1,19 @@
 {
-  "extends": ["react-app", "prettier"],
+  "extends": [
+    "semistandard",
+    "react-native",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/standard",
+    "plugin:jest/recommended"
+  ],
   "parserOptions": {
     "ecmaVersion": 11,
-    "sourceType": "script",
+    "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true,
       "globalReturn": true,
@@ -69,7 +80,9 @@
     "camelcase": 2,
     "array-bracket-spacing": 2,
     "arrow-parens": 2,
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "import/order": ["error", { "newlines-between": "always" }],
+    "import/no-namespace": "off"
   },
   "plugins": ["prettier"],
   "env": {
