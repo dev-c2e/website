@@ -1,4 +1,5 @@
 {
+  "extends": ["react-app", "prettier"],
   "parserOptions": {
     "ecmaVersion": 11,
     "sourceType": "script",
@@ -9,6 +10,7 @@
     }
   },
   "rules": {
+    "no-console": "warn",
     "constructor-super": 2,
     "for-direction": 2,
     "getter-return": 2,
@@ -66,8 +68,10 @@
     "array-bracket-newline": 2,
     "camelcase": 2,
     "array-bracket-spacing": 2,
-    "arrow-parens": 2
+    "arrow-parens": 2,
+    "prettier/prettier": "error"
   },
+  "plugins": ["prettier"],
   "env": {
     "browser": true,
     "node": true,
